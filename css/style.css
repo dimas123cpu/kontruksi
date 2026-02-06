@@ -1,6 +1,7 @@
 /* =========================================
    1. VARIABLE & GLOBAL STYLES
    ========================================= */
+/* START: GLOBAL STYLES */
 :root {
   --primary: #001f3f;
   --accent: #f39c12;
@@ -20,32 +21,33 @@ body {
   color: var(--text-dark);
   padding-bottom: 100px;
 }
+/* END: GLOBAL STYLES */
 
 /* =========================================
    2. NAVBAR & NAVIGATION
    ========================================= */
+/* START: NAVBAR & NAVIGATION */
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 5%;
+  padding: 15px 5%;
   width: 100%;
   position: fixed; /* Mengunci di atas */
   top: 0;
   left: 0;
   z-index: 2000;
-  background: transparent; /* Awalnya transparan */
-  transition: all 0.4s ease-in-out;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.4s ease; /* Transisi halus saat scroll */
 }
 
 /* --- Kondisi Navbar Saat di Scroll (Aktif via JS) --- */
 .navbar.scrolled {
-  background: #ffffff; /* Berubah jadi putih */
+  background: var(--primary); /* Berubah jadi putih */
   padding: 12px 5%; /* Navbar mengecil sedikit */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 2px solid var(--bg-light);
 }
 
 /* --- Logo Styling --- */
@@ -59,7 +61,7 @@ body {
 }
 
 .navbar.scrolled .logo {
-  color: var(--primary); /* Berubah biru tua saat scroll */
+  color: var(--bg-light); /* Berubah biru tua saat scroll */
 }
 
 /* --- Nav Menu Desktop --- */
@@ -76,7 +78,7 @@ body {
 
 .nav-menu li a {
   text-decoration: none;
-  color: #ffffff; /* Default putih */
+  color: #fff; /* Default putih */
   margin: 0 15px;
   font-size: 14px;
   font-weight: 600;
@@ -86,11 +88,11 @@ body {
 
 /* Link berubah warna saat di scroll */
 .navbar.scrolled .nav-menu li a {
-  color: #444;
+  color: #fff;
 }
 
 .nav-menu li a:hover {
-  color: var(--accent) !important;
+  color: var(--primary) !important;
 }
 
 /* --- Dropdown Desktop --- */
@@ -143,12 +145,12 @@ body {
 
 .navbar.scrolled #searchIcon,
 .navbar.scrolled #hamburgerBtn {
-  color: var(--primary);
+  color: var(--bg-light);
 }
 
 #searchIcon:hover,
 #hamburgerBtn:hover {
-  color: var(--accent) !important;
+  color: var(--bg-light) !important;
 }
 
 /* --- Search Input Styling --- */
@@ -156,7 +158,7 @@ body {
   width: 0;
   opacity: 0;
   border: none;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--bg-light);
   padding: 5px 0;
   transition: all 0.4s ease;
   outline: none;
@@ -165,8 +167,8 @@ body {
 }
 
 .navbar.scrolled #searchInput {
-  color: #333;
-  border-bottom: 2px solid var(--primary);
+  color: #fff;
+  border-bottom: 2px solid var(--bg-light);
 }
 
 #searchInput.active {
@@ -202,114 +204,6 @@ body {
   }
 }
 
-/* --- Dropdown Desktop --- */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 15px;
-  background-color: #ffffff;
-  min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-  z-index: 1;
-  border-top: 3px solid var(--primary);
-  border-radius: 0 0 5px 5px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  animation: slideDown 0.3s ease;
-}
-
-.dropdown-content a {
-  color: #333 !important; /* Selalu gelap di dalam dropdown putih */
-  padding: 12px 20px;
-  display: block;
-  font-size: 13px;
-  border-bottom: 1px solid #f0f0f0;
-  margin: 0 !important;
-}
-
-.dropdown-content a:hover {
-  background-color: #f8f9fa;
-  padding-left: 25px;
-}
-
-/* --- Ikon Samping (Search & Hamburger) --- */
-.nav-right-icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-#searchIcon,
-#hamburgerBtn {
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: #ffffff; /* Default putih */
-  transition: 0.3s;
-}
-
-.navbar.scrolled #searchIcon,
-.navbar.scrolled #hamburgerBtn {
-  color: var(--primary);
-}
-
-#searchIcon:hover,
-#hamburgerBtn:hover {
-  color: var(--accent) !important;
-}
-
-/* --- Search Input Styling --- */
-#searchInput {
-  width: 0;
-  opacity: 0;
-  border: none;
-  border-bottom: 2px solid var(--accent);
-  padding: 5px 0;
-  transition: all 0.4s ease;
-  outline: none;
-  background: transparent;
-  color: #ffffff; /* Putih saat di atas */
-}
-
-.navbar.scrolled #searchInput {
-  color: #333;
-  border-bottom: 2px solid var(--primary);
-}
-
-#searchInput.active {
-  width: 150px;
-  opacity: 1;
-  padding: 5px 10px;
-}
-
-/* --- Responsive (Mobile) --- */
-@media (max-width: 992px) {
-  .nav-menu {
-    display: none; /* Sembunyikan menu tengah di tablet/HP */
-  }
-
-  .navbar {
-    padding: 20px 5%;
-  }
-
-  .navbar.scrolled {
-    padding: 15px 5%;
-  }
-}
-
-/* Animasi Dropdown */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* Dropdown Navigasi Atas (Desktop) */
 .dropdown {
   position: relative;
@@ -341,9 +235,11 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/* END: NAVBAR & NAVIGATION */
 
 /* --- HIGHLIGHTS --- */
 /* --- STYLING ZIG-ZAG --- */
+/* START: HIGHLIGHTS & SECTION STYLING */
 .section-grid.zigzag {
   display: flex;
   align-items: center;
@@ -442,7 +338,10 @@ body {
   scroll-margin-top: 100px; /* Supaya saat klik menu 'About', tidak tertutup navbar */
   margin-bottom: 20px;
 }
+/* END: HIGHLIGHTS & SECTION STYLING */
+
 /* --- CLIENT SLIDER (BERGILIR) --- */
+/* START: HERO & LAYOUT SECTION */
 .client-slider-section {
   padding: 60px 0;
   background: #fff;
@@ -488,6 +387,7 @@ body {
     transform: translateX(calc(-250px * 5));
   }
 }
+
 /* =========================================
    3. HERO SECTION
    ========================================= */
@@ -524,10 +424,12 @@ body {
   cursor: pointer;
   margin-top: 20px;
 }
+/* END: HERO & LAYOUT SECTION */
 
 /* =========================================
    4. LAYOUT & CONTENT
    ========================================= */
+/* START: LAYOUT & CONTENT */
 .container {
   width: 90%;
   margin: 20px auto;
@@ -540,7 +442,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
-  background: white;
+  background: rgb(255, 255, 255);
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -715,10 +617,12 @@ body {
   right: 0;
   background: linear-gradient(to left, white, transparent);
 }
+/* END: LAYOUT & CONTENT */
 
 /* =========================================
    5. TEAM, CLIENTS & TESTIMONIALS
    ========================================= */
+/* START: TEAM, CLIENTS & TESTIMONIALS */
 .team-container {
   display: flex;
   gap: 20px;
@@ -822,10 +726,12 @@ body {
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
+/* END: TEAM, CLIENTS & TESTIMONIALS */
 
 /* =========================================
    6. SEARCH BOX
    ========================================= */
+/* START: SEARCH BOX */
 .search-container {
   display: flex;
   align-items: center;
@@ -871,10 +777,12 @@ body {
   color: black;
   font-weight: bold;
 }
+/* END: SEARCH BOX */
 
 /* =========================================
    7. HAMBURGER & SIDE MENU
    ========================================= */
+/* START: HAMBURGER & SIDE MENU */
 #hamburgerBtn {
   cursor: pointer;
   font-size: 1.5rem;
@@ -995,9 +903,12 @@ body {
   display: block !important;
   background: rgba(255, 255, 255, 0.05);
 }
+/* END: HAMBURGER & SIDE MENU */
+
 /* =========================================
    8. WHATSAPP FLOATING
    ========================================= */
+/* START: WHATSAPP FLOATING */
 .floating-wa {
   position: fixed;
   bottom: 25px;
@@ -1040,10 +951,12 @@ body {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
+/* END: WHATSAPP FLOATING */
 
 /* =========================================
    9. FOOTER
    ========================================= */
+/* START: FOOTER */
 .modern-footer {
   background: #001226;
   color: white;
@@ -1153,36 +1066,29 @@ body {
     padding: 0 10px 5px;
   }
 }
+/* END: FOOTER */
 
 /* =========================================
    10. MEDIA QUERIES (RESPONSIVE)
    ========================================= */
+/* START: MEDIA QUERIES */
+.nav-right-icons {
+  gap: 10px;
+}
+.mobile-only-menu {
+  display: block;
+}
 
-/* Tablet & Mobile (di bawah 992px) */
-@media (max-width: 992px) {
-  .nav-menu {
-    display: none !important;
-  }
+#sideMenu .side-menu-content {
+  padding-top: 20px;
+  top: 5%;
+}
 
-  .nav-right-icons {
-    gap: 10px;
-  }
-
-  .mobile-only-menu {
-    display: block;
-  }
-
-  #sideMenu .side-menu-content {
-    padding-top: 20px;
-    top: 5%;
-  }
-
-  #sideMenu .side-menu-content a {
-    font-size: 16px;
-    padding: 15px 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: left;
-  }
+#sideMenu .side-menu-content a {
+  font-size: 16px;
+  padding: 15px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
 }
 
 /* Mobile Standard (di bawah 768px) */
@@ -1251,17 +1157,6 @@ body {
   }
 }
 
-/* Animasi Slide */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 992px) {
   .section-grid.zigzag,
@@ -1282,7 +1177,12 @@ body {
     transform: translateX(-50%);
   }
 }
-/* Pastikan ini ada di style.css */
+/* END: MEDIA QUERIES */
+
+/* =========================================
+   11. ADDITIONAL SECTIONS
+   ========================================= */
+/* START: ADDITIONAL BUTTON STYLES */
 .btn-read-dark {
   background: var(--primary);
   color: white !important; /* Paksa warna putih */
@@ -1301,7 +1201,9 @@ body {
   background: var(--accent);
   color: white !important;
 }
-/* CONTAINER */
+/* END: ADDITIONAL BUTTON STYLES */
+
+/* START: CLIENT SECTION */
 .client-section {
   padding: 80px 0;
   background-color: #ffffff;
@@ -1419,6 +1321,9 @@ body {
     width: 80px; /* Perkecil efek blur di HP */
   }
 }
+/* END: CLIENT SECTION */
+
+/* START: MISSION LIST */
 .mission-list {
   margin-top: 20px;
   display: flex;
@@ -1449,6 +1354,9 @@ body {
   background: #003366; /* Biru gelap saat hover */
   color: white;
 }
+/* END: MISSION LIST */
+
+/* START: CEO MESSAGE SECTION */
 .ceo-message-section {
   padding: 100px 0;
   background-color: #ffffff;
@@ -1556,8 +1464,12 @@ body {
     margin-bottom: 40px;
   }
 }
-/* PEKERJAAN */
+/* END: CEO MESSAGE SECTION */
 
+/* =========================================
+   12. PROFILE & WORK SCOPE
+   ========================================= */
+/* START: PROFILE & WORK SCOPE */
 .profile-section {
   padding: 60px 0;
   background-color: #fff;
@@ -1664,7 +1576,9 @@ body {
   font-weight: 600;
   line-height: 1.4;
 }
-/* Container Utama */
+/* END: PROFILE & WORK SCOPE */
+
+/* START: CLIENT GRID SECTION */
 .client-section {
   padding: 80px 0;
   background-color: #f9f9f9;
@@ -1756,7 +1670,12 @@ body {
     height: 100px;
   }
 }
-/* PARTNERS SECTION */
+/* END: CLIENT GRID SECTION */
+
+/* =========================================
+   13. ORGANIZATION STRUCTURE
+   ========================================= */
+/* START: ORGANIZATION STRUCTURE */
 
 /* Responsif Mobile */
 @media (max-width: 992px) {
@@ -1778,6 +1697,7 @@ body {
     padding: 10px 20px;
   }
 }
+
 .org-structure-section {
   padding: 80px 0;
   background-color: #fcfcfc;
@@ -1901,8 +1821,12 @@ body {
     width: 90%;
   }
 }
-/*ABOUT AS */
+/* END: ORGANIZATION STRUCTURE */
 
+/* =========================================
+   14. ABOUT PAGE STYLES
+   ========================================= */
+/* START: ABOUT PAGE */
 .about-page .navbar {
   background-color: #ffffff !important;
   padding: 12px 5% !important;
@@ -2042,8 +1966,12 @@ body {
     grid-template-columns: 1fr;
   }
 }
-/* CONTACT */
-/* --- Contact Page Styles --- */
+/* END: ABOUT PAGE */
+
+/* =========================================
+   15. CONTACT PAGE STYLES
+   ========================================= */
+/* START: CONTACT PAGE */
 .contact-page .navbar.scrolled {
   background-color: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -2139,8 +2067,12 @@ body {
     grid-template-columns: 1fr;
   }
 }
-/* civil */
-/* Hero Jasa */
+/* END: CONTACT PAGE */
+
+/* =========================================
+   16. CIVIL/SERVICES PAGE STYLES
+   ========================================= */
+/* START: CIVIL SERVICES */
 .service-hero {
   background:
     linear-gradient(rgba(26, 60, 90, 0.8), rgba(26, 60, 90, 0.8)),
@@ -2223,8 +2155,12 @@ body {
     flex-direction: column;
   }
 }
-/* SLINDER */
+/* END: CIVIL SERVICES */
 
+/* =========================================
+   17. PARTNERS SECTION
+   ========================================= */
+/* START: PARTNERS SLIDER */
 .partners-section {
   padding: 80px 0;
   background-color: #f9f9f9; /* Warna latar lembut */
@@ -2301,3 +2237,14 @@ body {
 .swiper-button-next {
   right: 10px !important;
 }
+/* END: PARTNERS SLIDER */
+
+/* =========================================
+   18. NAVBAR HOME PAGE FINAL STYLES
+   ========================================= */
+/* START: NAVBAR HOME PAGE */
+/* END: NAVBAR HOME PAGE */
+
+/* =========================================
+   END OF STYLESHEET
+   ========================================= */

@@ -3,15 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - CV Aulia Jaya</title>
+    <title>CV Aulia Jaya - Kualitas Terdepan</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
-  <body class="about-page">
-    <nav class="navbar scrolled">
+  <body class="inner-page">
+    <!-- NAVBAR -->
+    <nav class="navbar">
       <div class="logo">AULIA JAYA</div>
       <ul class="nav-menu">
         <li><a href="index.html">HOME</a></li>
@@ -29,7 +34,7 @@
             >SERVICES <i class="fa-solid fa-chevron-down"></i
           ></a>
           <div class="dropdown-content">
-            <a href="#sipil">Civil Construction</a>
+            <a href="civil.html">Civil Construction</a>
             <a href="#cleaning">Cleaning Service</a>
             <a href="#maintenance">Building Maintenance</a>
             <a href="#trading">General Trading</a>
@@ -58,74 +63,135 @@
         </div>
       </div>
     </nav>
+    <!--END NAVBAR-->
+    <!-- SIDE OVERLAY -->
+    <div id="sideMenu" class="side-menu-overlay">
+      <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+      <div class="side-menu-content">
+        <div class="mobile-nav">
+          <a href="index.html">HOME</a>
 
-    <section class="contact-section">
-      <div class="container">
-        <h2 class="section-title">Hubungi Kami</h2>
-        <p class="section-subtitle">
-          Kami siap melayani kebutuhan perdagangan umum dan jasa Anda dengan
-          profesional.
-        </p>
-
-        <div class="contact-grid">
-          <div class="contact-info">
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Alamat Kantor</h4>
-                <p>Griya Kencana Asri B/18 Wonorejo Rungkut Surabaya</p>
-              </div>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-phone-alt"></i>
-              <div>
-                <h4>Telepon</h4>
-                <p>+6281393863309 / +628155226015</p>
-              </div>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-clock"></i>
-              <div>
-                <h4>Jam Operasional</h4>
-                <p>Senin - Jumat: 08.00 – 17.00</p>
-                <p>Sabtu: 08.00 – 14.00</p>
-              </div>
+          <div class="mobile-dropdown">
+            <button class="mobile-dropbtn">
+              ABOUT US <i class="fa-chevron-down"></i>
+            </button>
+            <div class="mobile-drop-content">
+              <a href="about.html">Our Profile</a>
+              <a href="contact.html">Contact Us</a>
             </div>
           </div>
 
-          <div class="contact-form">
-            <form action="#">
-              <div class="input-group">
-                <input type="text" placeholder="Nama Lengkap" required />
+          <div class="mobile-dropdown">
+            <button class="mobile-dropbtn">
+              SERVICES <i class="fa-chevron-down"></i>
+            </button>
+            <div class="mobile-drop-content">
+              <a href="civil.html">Civil Construction</a>
+              <a href="#cleaning">Cleaning Service</a>
+              <a href="#maintenance">Building Maintenance</a>
+              <a href="#trading">General Trading</a>
+            </div>
+          </div>
+
+          <a href="#portfolio">CLIENTS</a>
+
+          <div class="mobile-dropdown">
+            <button class="mobile-dropbtn">
+              INSIGHTS <i class="fa-chevron-down"></i>
+            </button>
+            <div class="mobile-drop-content">
+              <a href="#">BLOG</a>
+              <a href="#">RISET</a>
+              <a href="#">NEWS</a>
+            </div>
+          </div>
+
+          <hr
+            style="border: 0.5px solid rgba(255, 255, 255, 0.1); margin: 15px 0"
+          />
+        </div>
+
+        <a href="#"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a>
+        <a href="#"><i class="fas fa-graduation-cap"></i> E-LEARNING</a>
+      </div>
+    </div>
+    <!-- END OVERLAY -->
+    <!-- HERO SECTION -->
+    <main>
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="section-subtitle">
+            Kami siap melayani kebutuhan perdagangan umum dan jasa Anda dengan
+            profesional.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Alamat Kantor</h4>
+                  <p>Griya Kencana Asri B/18 Wonorejo Rungkut Surabaya</p>
+                </div>
               </div>
-              <div class="input-group">
-                <input type="email" placeholder="Email Anda" required />
+              <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Telepon</h4>
+                  <p>+6281393863309 / +628155226015</p>
+                </div>
               </div>
-              <div class="input-group">
-                <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Jam Operasional</h4>
+                  <p>Senin - Jumat: 08.00 – 17.00</p>
+                  <p>Sabtu: 08.00 – 14.00</p>
+                </div>
               </div>
-              <button type="submit" class="btn-submit">Kirim Pesan</button>
-            </form>
+            </div>
+
+            <div class="contact-form">
+              <form action="#">
+                <div class="input-group">
+                  <input type="text" placeholder="Nama Lengkap" required />
+                </div>
+                <div class="input-group">
+                  <input type="email" placeholder="Email Anda" required />
+                </div>
+                <div class="input-group">
+                  <textarea
+                    placeholder="Pesan Anda"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Kirim Pesan</button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="map-section">
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2917025816!2d112.7950!3d-7.3165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb066729c379%3A0x359eaf12486fdf3e!2sPerumahan%20YKP%20Griya%20Kencana%20Asri!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
-          width="100%"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        >
-          width="100%" height="450" style="border: 0" allowfullscreen=""
-          loading="lazy" >
-        </iframe>
-      </div>
-    </section>
+      </section>
+      <!-- END CONTACT -->
+      <!-- MAP -->
+      <section class="map-section">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2917025816!2d112.7950!3d-7.3165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb066729c379%3A0x359eaf12486fdf3e!2sPerumahan%20YKP%20Griya%20Kencana%20Asri!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+            width="100%" height="450" style="border: 0" allowfullscreen=""
+            loading="lazy" >
+          </iframe>
+        </div>
+      </section>
+    </main>
+    <!-- CONTACT -->
     <footer class="modern-footer">
       <div class="footer-top">
         <div class="footer-info">
@@ -163,10 +229,16 @@
         <p>&copy; 2026 CV Aulia Jaya. All Rights Reserved.</p>
       </div>
     </footer>
+    <!-- END CONTACT -->
+    <!-- WHATSAPP -->
     <a href="https://wa.me/6285135817808" class="floating-wa" target="_blank">
       <i class="fab fa-whatsapp"></i>
       <span>Hubungi Kami</span>
     </a>
+    <!-- END WHATSAPP -->
+    <!-- JAVA SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- END JAVA SCRIPT -->
   </body>
 </html>

@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const sideMenu = document.getElementById("sideMenu");
   const searchIcon = document.getElementById("searchIcon");
   const searchInput = document.getElementById("searchInput");
-
   // 2. LOGIKA HAMBURGER MENU (BUKA/TUTUP)
   if (hamburgerBtn && sideMenu && closeBtn) {
     hamburgerBtn.addEventListener("click", () => {
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
   // 3. LOGIKA SUB-MENU DI DALAM HAMBURGER (HP)
   document.querySelectorAll(".mobile-dropbtn").forEach((button) => {
     button.addEventListener("click", function (e) {
@@ -176,32 +174,6 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("scrolled");
   }
 });
-// 10. INISIALISASI SWIPER.JS UNTUK PARTNER LOGO
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".partnerSwiper", {
-    slidesPerView: 1, // 1 slide di HP
-    spaceBetween: 30,
-    loop: true,
-    slidesPerGroup: 1, // Geser 1 per 1 saat diklik
-    autoplay: {
-      delay: 3500, // Berhenti sejenak 3.5 detik
-      disableOnInteraction: false,
-      reverseDirection: true, // Arah bergulir ke KANAN
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2, // 2 slide di Tablet
-      },
-      1024: {
-        slidesPerView: 3, // 3 slide di Desktop sesuai gambar
-      },
-    },
-  });
-});
 // Akhir script.js
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".partnerSwiper", {
@@ -211,4 +183,13 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-button-prev",
     },
   });
+});
+// NAVBAR HOME PAGE
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
 });
