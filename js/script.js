@@ -193,3 +193,19 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("scrolled");
   }
 });
+// AKHIR NAVBAR HOME PAGE
+// NAVBAR INNER PAGE
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+
+  // Hanya jalankan efek transparan-ke-solid jika ini di halaman HOME
+  if (document.body.classList.contains("home-page")) {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  }
+  // Di halaman lain (.inner-page), kita tidak melakukan apa-apa
+  // karena CSS sudah mengunci warnanya dengan !important
+});
