@@ -1,257 +1,246 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Aulia Jaya - Kualitas Terdepan</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
-  <body class="inner-page">
-    <!-- NAVBAR -->
-    <!-- NAVBAR -->
-    <nav class="navbar" id="solid-navbar">
-      <div class="logo">AULIA JAYA</div>
-      <ul class="nav-menu">
-        <li><a href="index.html">HOME</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn"
-            >ABOUT US <i class="fa-solid fa-chevron-down"></i
-          ></a>
-          <div class="dropdown-content">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Aulia Jaya - Kualitas Terdepan</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="inner-page">
+  <!-- NAVBAR -->
+  <!-- NAVBAR -->
+  <nav class="navbar" id="solid-navbar">
+    <div class="logo">AULIA JAYA</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="about.html">Our Profile</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="civil.html">Civil Construction</a>
+          <a href="cleaning.html">Cleaning Service</a>
+          <a href="building.html">Building Maintenance</a>
+          <a href="general.html">General Trading</a>
+        </div>
+      </li>
+      <li><a href="clients.html">CLIENTS</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">INSIGHTS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="blog.html">BLOG</a>
+          <a href="riset.html">RISET</a>
+          <a href="news.html">NEWS</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-right-icons">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari..." />
+        <i class="fas fa-search" id="searchIcon"></i>
+      </div>
+      <div class="hamburger-wrapper" id="hamburgerBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <!--END NAVBAR-->
+  <!-- SIDE OVERLAY -->
+  <div id="sideMenu" class="side-menu-overlay">
+    <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+    <div class="side-menu-content">
+      <div class="mobile-nav">
+        <a href="index.html">HOME</a>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-dropbtn">
+            ABOUT US <i class="fa-chevron-down"></i>
+          </button>
+          <div class="mobile-drop-content">
             <a href="about.html">Our Profile</a>
             <a href="contact.html">Contact Us</a>
           </div>
-        </li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn"
-            >SERVICES <i class="fa-solid fa-chevron-down"></i
-          ></a>
-          <div class="dropdown-content">
+        </div>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-dropbtn">
+            SERVICES <i class="fa-chevron-down"></i>
+          </button>
+          <div class="mobile-drop-content">
             <a href="civil.html">Civil Construction</a>
             <a href="cleaning.html">Cleaning Service</a>
             <a href="building.html">Building Maintenance</a>
             <a href="general.html">General Trading</a>
           </div>
-        </li>
-        <li><a href="clients.html">CLIENTS</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn"
-            >INSIGHTS <i class="fa-solid fa-chevron-down"></i
-          ></a>
-          <div class="dropdown-content">
+        </div>
+
+        <a href="clients.html">CLIENTS</a>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-dropbtn">
+            INSIGHTS <i class="fa-chevron-down"></i>
+          </button>
+          <div class="mobile-drop-content">
             <a href="blog.html">BLOG</a>
             <a href="riset.html">RISET</a>
             <a href="news.html">NEWS</a>
           </div>
-        </li>
-      </ul>
+        </div>
 
-      <div class="nav-right-icons">
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Cari..." />
-          <i class="fas fa-search" id="searchIcon"></i>
-        </div>
-        <div class="hamburger-wrapper" id="hamburgerBtn">
-          <i class="fas fa-bars"></i>
-        </div>
+        <hr style="border: 0.5px solid rgba(255, 255, 255, 0.1); margin: 15px 0" />
       </div>
-    </nav>
-    <!--END NAVBAR-->
-    <!-- SIDE OVERLAY -->
-    <div id="sideMenu" class="side-menu-overlay">
-      <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
-      <div class="side-menu-content">
-        <div class="mobile-nav">
-          <a href="index.html">HOME</a>
 
-          <div class="mobile-dropdown">
-            <button class="mobile-dropbtn">
-              ABOUT US <i class="fa-chevron-down"></i>
-            </button>
-            <div class="mobile-drop-content">
-              <a href="about.html">Our Profile</a>
-              <a href="contact.html">Contact Us</a>
-            </div>
-          </div>
-
-          <div class="mobile-dropdown">
-            <button class="mobile-dropbtn">
-              SERVICES <i class="fa-chevron-down"></i>
-            </button>
-            <div class="mobile-drop-content">
-              <a href="civil.html">Civil Construction</a>
-              <a href="cleaning.html">Cleaning Service</a>
-              <a href="building.html">Building Maintenance</a>
-              <a href="general.html">General Trading</a>
-            </div>
-          </div>
-
-          <a href="clients.html">CLIENTS</a>
-
-          <div class="mobile-dropdown">
-            <button class="mobile-dropbtn">
-              INSIGHTS <i class="fa-chevron-down"></i>
-            </button>
-            <div class="mobile-drop-content">
-              <a href="blog.html">BLOG</a>
-              <a href="riset.html">RISET</a>
-              <a href="news.html">NEWS</a>
-            </div>
-          </div>
-
-          <hr
-            style="border: 0.5px solid rgba(255, 255, 255, 0.1); margin: 15px 0"
-          />
+      <a href="#"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a>
+      <a href="#"><i class="fas fa-graduation-cap"></i> E-LEARNING</a>
+    </div>
+  </div>
+  <!-- END OVERLAY -->
+  <section class="service-detail section-padding">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-image">
+          <img src="img/img5.jpeg" alt="Cleaning Service" />
         </div>
+        <div class="detail-text">
+          <h2>Profesionalisme dalam Kebersihan</h2>
+          <p>
+            Kami menyediakan layanan kebersihan menyeluruh yang didukung oleh
+            tenaga kerja terlatih dan peralatan modern. Fokus kami adalah
+            menciptakan lingkungan yang tidak hanya bersih secara visual,
+            tetapi juga sehat dan higienis.
+          </p>
 
-        <a href="#"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a>
-        <a href="#"><i class="fas fa-graduation-cap"></i> E-LEARNING</a>
+          <div class="scope-work">
+            <h3>Ruang Lingkup Pekerjaan:</h3>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <strong>Commercial Cleaning:</strong> Perawatan harian gedung
+                kantor, mall, dan area publik.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <strong>General Cleaning:</strong> Pembersihan total secara
+                berkala untuk area baru atau pasca renovasi.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <strong>Specialized Cleaning:</strong> Kristalisasi lantai
+                marmer, cuci karpet, dan pembersihan kaca gedung tinggi
+                (gondola).
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <strong>Waste Management:</strong> Pengelolaan sampah domestik
+                secara terpadu.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- END OVERLAY -->
-    <section class="service-detail section-padding">
-      <div class="container">
-        <div class="detail-grid">
-          <div class="detail-image">
-            <img src="img/cleaning-detail.jpg" alt="Cleaning Service" />
-          </div>
-          <div class="detail-text">
-            <h2>Profesionalisme dalam Kebersihan</h2>
-            <p>
-              Kami menyediakan layanan kebersihan menyeluruh yang didukung oleh
-              tenaga kerja terlatih dan peralatan modern. Fokus kami adalah
-              menciptakan lingkungan yang tidak hanya bersih secara visual,
-              tetapi juga sehat dan higienis.
-            </p>
-
-            <div class="scope-work">
-              <h3>Ruang Lingkup Pekerjaan:</h3>
-              <ul>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <strong>Commercial Cleaning:</strong> Perawatan harian gedung
-                  kantor, mall, dan area publik.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <strong>General Cleaning:</strong> Pembersihan total secara
-                  berkala untuk area baru atau pasca renovasi.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <strong>Specialized Cleaning:</strong> Kristalisasi lantai
-                  marmer, cuci karpet, dan pembersihan kaca gedung tinggi
-                  (gondola).
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <strong>Waste Management:</strong> Pengelolaan sampah domestik
-                  secara terpadu.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="service-detail section-padding">
-      <div class="container">
-        <div class="detail-grid invert">
-          <div class="detail-text">
-            <h2>Pemeliharaan Aset & Engineering</h2>
-            <p>
-              Kami membantu memastikan seluruh sistem mekanikal, elektrikal, dan
-              plumbing (MEP) gedung Anda berfungsi optimal untuk memperpanjang
-              usia pakai aset dan menekan biaya perbaikan darurat.
-            </p>
-
-            <div class="scope-work">
-              <h3>Layanan Unggulan Kami:</h3>
-              <ul>
-                <li>
-                  <i class="fas fa-tools"></i>
-                  <strong>Preventive Maintenance:</strong> Inspeksi rutin
-                  kelistrikan, genset, dan panel distribusi.
-                </li>
-                <li>
-                  <i class="fas fa-tools"></i>
-                  <strong>HVAC Maintenance:</strong> Perawatan rutin sistem tata
-                  udara (AC Central & Split).
-                </li>
-                <li>
-                  <i class="fas fa-tools"></i>
-                  <strong>Civil Maintenance:</strong> Perbaikan struktur ringan,
-                  pengecatan, dan kebocoran atap.
-                </li>
-                <li>
-                  <i class="fas fa-tools"></i>
-                  <strong>Plumbing System:</strong> Pemeliharaan pompa booster,
-                  sistem drainase, dan instalasi air bersih.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="detail-image">
-            <img src="img/maintenance-detail.jpg" alt="Building Maintenance" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <a href="https://wa.me/6285135817808" class="floating-wa" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-      <span>Hubungi Kami</span>
-    </a>
-    <!-- CONTACT -->
-    <footer class="modern-footer">
-      <div class="footer-top">
-        <div class="footer-info">
-          <h2 class="footer-logo">AULIA JAYA</h2>
+  </section>
+  <section class="service-detail section-padding">
+    <div class="container">
+      <div class="detail-grid invert">
+        <div class="detail-text">
+          <h2>Pemeliharaan Aset & Engineering</h2>
           <p>
-            Solusi terpercaya untuk konstruksi sipil, perawatan gedung, dan
-            perdagangan umum sejak 2011.
+            Kami membantu memastikan seluruh sistem mekanikal, elektrikal, dan
+            plumbing (MEP) gedung Anda berfungsi optimal untuk memperpanjang
+            usia pakai aset dan menekan biaya perbaikan darurat.
           </p>
-          <div class="footer-socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="footer-links-grid">
-          <div class="footer-group">
-            <h3>Layanan</h3>
+
+          <div class="scope-work">
+            <h3>Layanan Unggulan Kami:</h3>
             <ul>
-              <li><a href="#sipil">Konstruksi Sipil</a></li>
-              <li><a href="#maintenance">Maintenance</a></li>
-              <li><a href="#cleaning">Cleaning Service</a></li>
+              <li>
+                <i class="fas fa-tools"></i>
+                <strong>Preventive Maintenance:</strong> Inspeksi rutin
+                kelistrikan, genset, dan panel distribusi.
+              </li>
+              <li>
+                <i class="fas fa-tools"></i>
+                <strong>HVAC Maintenance:</strong> Perawatan rutin sistem tata
+                udara (AC Central & Split).
+              </li>
+              <li>
+                <i class="fas fa-tools"></i>
+                <strong>Civil Maintenance:</strong> Perbaikan struktur ringan,
+                pengecatan, dan kebocoran atap.
+              </li>
+              <li>
+                <i class="fas fa-tools"></i>
+                <strong>Plumbing System:</strong> Pemeliharaan pompa booster,
+                sistem drainase, dan instalasi air bersih.
+              </li>
             </ul>
           </div>
-          <div class="footer-group">
-            <h3>Perusahaan</h3>
-            <ul>
-              <li><a href="#about">Tentang Kami</a></li>
-              <li><a href="#portfolio">Klien</a></li>
-              <li><a href="#contact">Kontak</a></li>
-            </ul>
-          </div>
+        </div>
+        <div class="detail-image">
+          <img src="img/img6.jpeg" alt="Building Maintenance" />
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 CV Aulia Jaya. All Rights Reserved.</p>
+    </div>
+  </section>
+
+  <a href="https://wa.me/6285135817808" class="floating-wa" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>Hubungi Kami</span>
+  </a>
+  <!-- CONTACT -->
+  <footer class="modern-footer">
+    <div class="footer-top">
+      <div class="footer-info">
+        <h2 class="footer-logo">AULIA JAYA</h2>
+        <p>
+          Solusi terpercaya untuk konstruksi sipil, perawatan gedung, dan
+          perdagangan umum sejak 2011.
+        </p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-    </footer>
-    <!-- END CONTACT -->
-    <!-- JAVA SCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- END JAVA SCRIPT -->
-  </body>
+      <div class="footer-links-grid">
+        <div class="footer-group">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="#sipil">Konstruksi Sipil</a></li>
+            <li><a href="#maintenance">Maintenance</a></li>
+            <li><a href="#cleaning">Cleaning Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h3>Perusahaan</h3>
+          <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#portfolio">Klien</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CV Aulia Jaya. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- END CONTACT -->
+  <!-- JAVA SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- END JAVA SCRIPT -->
+</body>
+
 </html>

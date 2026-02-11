@@ -1,245 +1,221 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Aulia Jaya - Kualitas Terdepan</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
-  <body class="inner-page">
-    <!-- NAVBAR -->
-    <nav class="navbar" id="solid-navbar">
-      <div class="logo">AULIA JAYA</div>
-      <ul class="nav-menu">
-        <li><a href="index.html">HOME</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn"
-            >ABOUT US <i class="fa-solid fa-chevron-down"></i
-          ></a>
-          <div class="dropdown-content">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Aulia Jaya - Kualitas Terdepan</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="inner-page">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="solid-navbar">
+    <div class="logo">AULIA JAYA</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="about.html">Our Profile</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="civil.html">Civil Construction</a>
+          <a href="cleaning.html">Cleaning Service</a>
+          <a href="building.html">Building Maintenance</a>
+          <a href="general.html">General Trading</a>
+        </div>
+      </li>
+      <li><a href="clients.html">CLIENTS</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">INSIGHTS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="blog.html">BLOG</a>
+          <a href="riset.html">RISET</a>
+          <a href="news.html">NEWS</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-right-icons">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari..." />
+        <i class="fas fa-search" id="searchIcon"></i>
+      </div>
+      <div class="hamburger-wrapper" id="hamburgerBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <!--END NAVBAR-->
+  <!-- SIDE OVERLAY -->
+  <div id="sideMenu" class="side-menu-overlay">
+    <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+    <div class="side-menu-content">
+      <div class="mobile-nav">
+        <a href="index.html">HOME</a>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-dropbtn">
+            ABOUT US <i class="fa-chevron-down"></i>
+          </button>
+          <div class="mobile-drop-content">
             <a href="about.html">Our Profile</a>
             <a href="contact.html">Contact Us</a>
           </div>
-        </li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn"
-            >SERVICES <i class="fa-solid fa-chevron-down"></i
-          ></a>
-          <div class="dropdown-content">
+        </div>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-dropbtn">
+            SERVICES <i class="fa-chevron-down"></i>
+          </button>
+          <div class="mobile-drop-content">
             <a href="civil.html">Civil Construction</a>
             <a href="cleaning.html">Cleaning Service</a>
             <a href="building.html">Building Maintenance</a>
             <a href="general.html">General Trading</a>
           </div>
-        </li>
-        <li><a href="clients.html">CLIENTS</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn"
-            >INSIGHTS <i class="fa-solid fa-chevron-down"></i
-          ></a>
-          <div class="dropdown-content">
+        </div>
+
+        <a href="clients.html">CLIENTS</a>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-dropbtn">
+            INSIGHTS <i class="fa-chevron-down"></i>
+          </button>
+          <div class="mobile-drop-content">
             <a href="blog.html">BLOG</a>
             <a href="riset.html">RISET</a>
             <a href="news.html">NEWS</a>
           </div>
-        </li>
-      </ul>
+        </div>
 
-      <div class="nav-right-icons">
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Cari..." />
-          <i class="fas fa-search" id="searchIcon"></i>
-        </div>
-        <div class="hamburger-wrapper" id="hamburgerBtn">
-          <i class="fas fa-bars"></i>
-        </div>
+        <hr style="border: 0.5px solid rgba(255, 255, 255, 0.1); margin: 15px 0" />
       </div>
-    </nav>
-    <!--END NAVBAR-->
-    <!-- SIDE OVERLAY -->
-    <div id="sideMenu" class="side-menu-overlay">
-      <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
-      <div class="side-menu-content">
-        <div class="mobile-nav">
-          <a href="index.html">HOME</a>
 
-          <div class="mobile-dropdown">
-            <button class="mobile-dropbtn">
-              ABOUT US <i class="fa-chevron-down"></i>
-            </button>
-            <div class="mobile-drop-content">
-              <a href="about.html">Our Profile</a>
-              <a href="contact.html">Contact Us</a>
-            </div>
-          </div>
-
-          <div class="mobile-dropdown">
-            <button class="mobile-dropbtn">
-              SERVICES <i class="fa-chevron-down"></i>
-            </button>
-            <div class="mobile-drop-content">
-              <a href="civil.html">Civil Construction</a>
-              <a href="cleaning.html">Cleaning Service</a>
-              <a href="building.html">Building Maintenance</a>
-              <a href="general.html">General Trading</a>
-            </div>
-          </div>
-
-          <a href="clients.html">CLIENTS</a>
-
-          <div class="mobile-dropdown">
-            <button class="mobile-dropbtn">
-              INSIGHTS <i class="fa-chevron-down"></i>
-            </button>
-            <div class="mobile-drop-content">
-              <a href="blog.html">BLOG</a>
-              <a href="riset.html">RISET</a>
-              <a href="news.html">NEWS</a>
-            </div>
-          </div>
-
-          <hr
-            style="border: 0.5px solid rgba(255, 255, 255, 0.1); margin: 15px 0"
-          />
-        </div>
-
-        <a href="#"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a>
-        <a href="#"><i class="fas fa-graduation-cap"></i> E-LEARNING</a>
-      </div>
+      <a href="#"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a>
+      <a href="#"><i class="fas fa-graduation-cap"></i> E-LEARNING</a>
     </div>
-    <!-- END OVERLAY -->
-    <section class="research-page section-padding">
+  </div>
+  <!-- END OVERLAY -->
+  <main>
+    <section class="research-hero">
+      <div class="container text-center">
+        <span class="pre-title">Quality & Innovation</span>
+        <h1>Riset & Pengembangan</h1>
+        <p>Menganalisis data teknis dan kapabilitas material untuk memberikan solusi pemeliharaan industri yang efisien
+          dan berkelanjutan.</p>
+      </div>
+    </section>
+
+    <section class="research-content section-padding">
       <div class="container">
-        <div class="research-header text-center">
-          <span class="tagline">Quality Assurance & Innovation</span>
-          <h2>Riset & Pengembangan Layanan</h2>
-          <p>
-            Kami tidak sekadar bekerja; kami melakukan riset mendalam untuk
-            memastikan setiap material dan metode pengerjaan memenuhi standar
-            efisiensi tinggi.
-          </p>
-        </div>
+        <div class="research-layout">
+          <div class="res-image-box">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070"
+              alt="Technical Research">
+          </div>
+          <div class="res-text-box">
+            <h2>Metodologi Analisis Teknis</h2>
+            <p>Kami menerapkan riset mendalam pada setiap lini layanan kami untuk memastikan standar keamanan dan
+              fungsionalitas terpenuhi:</p>
 
-        <div class="research-grid">
-          <div class="research-item">
-            <div class="res-icon"><i class="fas fa-microscope"></i></div>
-            <h3>Analisis Kebutuhan Material</h3>
-            <p>
-              Melakukan riset pasar untuk mendapatkan material terbaik dari
-              supplier terpercaya di Malang dan Surabaya guna menjaga kualitas
-              dan kontinuitas.
-            </p>
-          </div>
-          <div class="research-item">
-            <div class="res-icon"><i class="fas fa-map-marked-alt"></i></div>
-            <h3>Survei Lokasi & Teknis</h3>
-            <p>
-              Setiap proyek pemeliharaan gedung atau konstruksi diawali dengan
-              riset lapangan mendetail untuk memetakan risiko dan kebutuhan
-              spesifik area pengerjaan.
-            </p>
-          </div>
-          <div class="research-item">
-            <div class="res-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Evaluasi Kinerja Berkala</h3>
-            <p>
-              Mengumpulkan data performa pengerjaan (seperti efisiensi boiler
-              atau ketahanan pengecatan) sebagai bahan riset untuk perbaikan
-              layanan di masa depan.
-            </p>
-          </div>
-        </div>
-
-        <div class="research-detail bg-light">
-          <div class="detail-grid">
-            <div class="detail-text">
-              <h2>Riset Operasional & Logistik</h2>
-              <p>
-                Berdasarkan data operasional kami, pengembangan rantai pasok
-                yang kuat merupakan hasil riset panjang terhadap kapabilitas
-                vendor.
-              </p>
-              <ul class="res-list">
-                <li>
-                  <i class="fas fa-search"></i>
-                  <strong>Seleksi Vendor:</strong> Riset ketat terhadap izin dan
-                  standar produk supplier.
-                </li>
-                <li>
-                  <i class="fas fa-flask"></i>
-                  <strong>Uji Material:</strong> Memastikan material seperti
-                  pipa, kabel, dan bahan kimia pembersih aman bagi lingkungan
-                  kerja.
-                </li>
-                <li>
-                  <i class="fas fa-shield-alt"></i>
-                  <strong>Standar K3:</strong> Pengembangan metode kerja yang
-                  meminimalkan kecelakaan di area proyek.
-                </li>
-              </ul>
-            </div>
-            <div class="detail-image">
-              <img src="img/research-image.jpg" alt="Aulia Jaya Research" />
-            </div>
+            <ul class="res-feature-list">
+              <li>
+                <strong>Audit Infrastruktur:</strong> Melakukan survei lapangan mendetail pada sistem perpipaan dan
+                mesin industri sebelum tahap modifikasi.
+              </li>
+              <li>
+                <strong>Seleksi Supplier Strategis:</strong> Melakukan riset dan verifikasi terhadap vendor di Malang
+                dan Surabaya guna memastikan kualitas material.
+              </li>
+              <li>
+                <strong>Uji Efisiensi Sistem:</strong> Menganalisis kinerja komponen seperti <em>Steam Trap</em> dan
+                <em>Check Valve</em> untuk optimasi energi.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <a href="https://wa.me/6285135817808" class="floating-wa" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-      <span>Hubungi Kami</span>
-    </a>
-    <!-- CONTACT -->
-    <footer class="modern-footer">
-      <div class="footer-top">
-        <div class="footer-info">
-          <h2 class="footer-logo">AULIA JAYA</h2>
-          <p>
-            Solusi terpercaya untuk konstruksi sipil, perawatan gedung, dan
-            perdagangan umum sejak 2011.
-          </p>
-          <div class="footer-socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <section class="sector-research section-padding bg-navy">
+      <div class="container">
+        <h2 class="text-center light-text">Fokus Pengembangan Layanan</h2>
+        <div class="sector-grid">
+          <div class="sector-item">
+            <i class="fas fa-industry"></i>
+            <h3>Sektor Manufaktur</h3>
+            <p>Riset pada sistem <em>Header Boiler</em> dan distribusi uap untuk efisiensi produksi maksimal.</p>
           </div>
-        </div>
-        <div class="footer-links-grid">
-          <div class="footer-group">
-            <h3>Layanan</h3>
-            <ul>
-              <li><a href="#sipil">Konstruksi Sipil</a></li>
-              <li><a href="#maintenance">Maintenance</a></li>
-              <li><a href="#cleaning">Cleaning Service</a></li>
-            </ul>
+          <div class="sector-item">
+            <i class="fas fa-hospital"></i>
+            <h3>Sektor Kesehatan</h3>
+            <p>Pengembangan standar higienitas dan sterilisasi untuk area sensitif di rumah sakit.</p>
           </div>
-          <div class="footer-group">
-            <h3>Perusahaan</h3>
-            <ul>
-              <li><a href="#about">Tentang Kami</a></li>
-              <li><a href="#portfolio">Klien</a></li>
-              <li><a href="#contact">Kontak</a></li>
-            </ul>
+          <div class="sector-item">
+            <i class="fas fa-university"></i>
+            <h3>Sektor Pendidikan</h3>
+            <p>Studi material konstruksi dan pengecatan untuk ketahanan jangka panjang bangunan universitas.</p>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 CV Aulia Jaya. All Rights Reserved.</p>
+    </section>
+  </main>
+
+  <a href="https://wa.me/6285135817808" class="floating-wa" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>Hubungi Kami</span>
+  </a>
+  <!-- CONTACT -->
+  <footer class="modern-footer">
+    <div class="footer-top">
+      <div class="footer-info">
+        <h2 class="footer-logo">AULIA JAYA</h2>
+        <p>
+          Solusi terpercaya untuk konstruksi sipil, perawatan gedung, dan
+          perdagangan umum sejak 2011.
+        </p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-    </footer>
-    <!-- END CONTACT -->
-    <!-- JAVA SCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- END JAVA SCRIPT -->
-  </body>
+      <div class="footer-links-grid">
+        <div class="footer-group">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="#sipil">Konstruksi Sipil</a></li>
+            <li><a href="#maintenance">Maintenance</a></li>
+            <li><a href="#cleaning">Cleaning Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h3>Perusahaan</h3>
+          <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#portfolio">Klien</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CV Aulia Jaya. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- END CONTACT -->
+  <!-- JAVA SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- END JAVA SCRIPT -->
+</body>
+
 </html>
